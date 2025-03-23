@@ -30,7 +30,7 @@ def read_root():
             <pre><code>curl -X POST "http://0.0.0.0:8000/recommendations" -H "Content-Type: application/json" -d '{"product_index": 49002}'</code></pre>
             <p>Replace <code>49002</code> with the product index for which you want recommendations. An example product is:</p>
             <ul>
-                <li><code>49002</code>: تيشيرت ليفربول الاساسي</li>
+                <li><code>10</code>: مسكره حواجب شفافه ناي دريم</li> 10
             </ul>
         </body>
     </html>
