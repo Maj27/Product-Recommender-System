@@ -1,6 +1,7 @@
 # app.py
 from fastapi import FastAPI, HTTPException
 from fastapi.encoders import jsonable_encoder
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 import uvicorn
 from helper import get_recommendations
