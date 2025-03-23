@@ -12,23 +12,29 @@ app = FastAPI(title="Product Recommendation API")
 class RecommendationRequest(BaseModel):
     product_index: int
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def read_root():
     """
     Root endpoint that provides a welcome message and instructions on how to use the API.
     """
-    welcome_message = (
-        "Welcome to the Product Recommendation API!\n\n"
-        "To get product recommendations, please use the `/recommendations` endpoint.\n\n"
-        "For example, you can use Postman or curl to send a POST request:\n\n"
-        "```\n"
-        "curl -X POST \"http://0.0.0.0:8000/recommendations\" -H \"Content-Type: application/json\" -d '{\"product_index\": 49002}'\n"
-        "```\n\n"
-        "Replace `49002` with the product index for which you want recommendations. "
-        "An example product is:\n\n"
-        "- `10`: مسكره حواجب \n"
-    )
-    return {"message": welcome_message}
+    html_content = """
+    <html>
+        <head>
+            <title>Welcome to the Product Recommendation API</title>
+        </head>
+        <body>
+            <h1>Welcome to the Product Recommendation API!</h1>
+            <p>To get product recommendations, please use the <code>/recommendations</code> endpoint.</p>
+            <p>For example, you can use Postman or <code>curl</code> to send a POST request:</p>
+            <pre><code>curl -X POST "http://0.0.0.0:8000/recommendations" -H "Content-Type: application/json" -d '{"product_index": 49002}'</code></pre>
+            <p>Replace <code>49002</code> with the product index for which you want recommendations. An example product is:</p>
+            <ul>
+                <li><code>49002</code>: تيشيرت ليفربول الاساسي</li>
+            </ul>
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content, status_code=200)
     
 @app.post("/recommendations")
 def recommend_products(request: RecommendationRequest):
