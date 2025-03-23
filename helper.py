@@ -13,7 +13,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 file_path ='./csv_for_case_study_V1.csv'
 df = pd.read_csv(file_path)
 
-sample_size = 50000  
+sample_size = 5000  
 df_sampled = df.sample(n=sample_size, random_state=42)
 
 
