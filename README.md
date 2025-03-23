@@ -2,6 +2,10 @@
 This repository contains a content-based product recommendation system that leverages textual features—specifically, product names—to generate personalized recommendations. The application is built using FastAPI, and the project is containerized using Docker for easy deployment. The repository includes helper scripts for preprocessing and feature extraction, as well as utility functions for tokenization/normalization.
 
 ## Files
+- Salla Product Recommender System.ipynb
+
+Notebook with all work rationale and steps
+  
 - app.py
   
 The main API application file. It defines the API endpoints (e.g., /recommendations) and contains the logic to retrieve product recommendations based on input product indices.
