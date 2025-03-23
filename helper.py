@@ -1,12 +1,12 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 import pandas as pd
 import re
 from camel_tools.utils.normalize import normalize_unicode
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
-import scipy.sparse as sp
+#import scipy.sparse as sp
 from sklearn.metrics.pairwise import cosine_similarity
 
 
