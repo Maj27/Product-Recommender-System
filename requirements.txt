@@ -1,6 +1,8 @@
-fastapi
-uvicorn
-pydantic
 seaborn
-camel_tools
+camel_tools==1.5.5
 scipy
+fastapi==0.88.0
+uvicorn==0.20.0
+pydantic==1.10.2
+pandas==1.5.3
+numpy==1.23.5
