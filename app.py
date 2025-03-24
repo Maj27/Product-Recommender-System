@@ -27,7 +27,7 @@ def read_root():
             <h1>Welcome to the Product Recommendation API!</h1>
             <p>To get product recommendations, please use the <code>/recommendations</code> endpoint.</p>
             <p>For example, you can use Postman or <code>curl</code> to send a POST request:</p>
-            <pre><code>curl -X POST "http://0.0.0.0:8000/recommendations" -H "Content-Type: application/json" -d '{"product_index": 49002}'</code></pre>
+            <pre><code>curl -X POST "http://0.0.0.0:8000/recommendations" -H "Content-Type: application/json" -d '{"product_index": 10}'</code></pre>
             <p>Replace <code>49002</code> with the product index for which you want recommendations. An example product is:</p>
             <ul>
                 <li><code>10</code>: مسكره حواجب شفافه ناي دريم</li> 10
